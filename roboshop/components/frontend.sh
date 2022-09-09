@@ -1,3 +1,3 @@
 #!/bin/bash
-echo "Im in frontend sh"
-echo "This is Nimmi"
+
+echo "I am in frontend sh"
