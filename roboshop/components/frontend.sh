@@ -2,7 +2,7 @@
 
 echo "I am in frontend !!"
 
-source common.sh
+source components/common.sh
 
 yum install nginx -y
 systemctl enable nginx
