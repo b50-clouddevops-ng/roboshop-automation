@@ -8,7 +8,7 @@ set -e
 source components/common.sh
 
 echo "Installing Nginx :"
-yum install nginx -y >> /tmp/frontend.log
+yum install nginx123 -y >> /tmp/frontend.log
 if [ $? -eq 0 ]; then
     echo -e "\e[32m SUCCESS \e[0m"
 else 
@@ -20,7 +20,7 @@ systemctl enable nginx
 echo "Starting Nginx :"
 systemctl start nginx
 
-echo "Download the frontend.zip to the /tmp"
+echo "Download the schema"
 curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/frontend/archive/main.zip"
 if [ $? -eq 0 ]; then
     echo -e "\e[32m SUCCESS \e[0m"
