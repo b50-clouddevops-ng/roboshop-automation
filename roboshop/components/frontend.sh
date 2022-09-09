@@ -7,7 +7,7 @@ set -e
 
 source components/common.sh
 
-echo "Installing Nginx :"
+echo -n "Installing Nginx :"
 yum install nginx -y >> /tmp/frontend.log
 if [ $? -eq 0 ]; then
     echo -e "\e[32m SUCCESS \e[0m"
@@ -17,7 +17,7 @@ fi
 
 systemctl enable nginx
 
-echo "Starting Nginx :"
+echo -n "Starting Nginx :"
 systemctl start nginx
 if [ $? -eq 0 ]; then
     echo -e "\e[32m SUCCESS \e[0m"
@@ -25,7 +25,7 @@ else
     echo -e "\e[31m Failure. Look for the log \e[0m"
 fi
 
-echo "Download the schema"
+echo -n "Download the schema"
 curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/frontend/archive/main.zip"
 if [ $? -eq 0 ]; then
     echo -e "\e[32m SUCCESS \e[0m"
