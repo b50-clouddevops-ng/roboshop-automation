@@ -19,6 +19,11 @@ systemctl enable nginx
 
 echo "Starting Nginx :"
 systemctl start nginx
+if [ $? -eq 0 ]; then
+    echo -e "\e[32m SUCCESS \e[0m"
+else 
+    echo -e "\e[31m Failure. Look for the log \e[0m"
+fi
 
 echo "Download the schema"
 curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/frontend/archive/main.zip"
