@@ -15,7 +15,7 @@ systemctl enable nginx
 
 echo -n "Starting Nginx :"
 systemctl start nginx
-star $?
+stat $?
 
 echo -n "Download the schema"
 curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/frontend/archive/main.zip"
