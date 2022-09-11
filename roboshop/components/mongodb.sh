@@ -31,5 +31,16 @@ echo -n " Restart mongodb :"
 systemctl restart mongod
 stat $?
 
+echo -n "Download the mongodb schema :"
+curl -s -L -o /tmp/mongodb.zip "https://github.com/stans-robot-project/mongodb/archive/main.zip"
+stat $?
+
+echo -n "Extrac mongodb schema :"
+cd /tmp && unzip mongodb.zip && cd mongodb-main 
+stat $?
+
+mongo < catalogue.js
+mongo < users.js
+
 
 
