@@ -39,7 +39,7 @@ stat $?
 # drwxr-xr-x 2 root root 83 Jun 22 06:18 catalogue
 
 echo -n "change the ownership of roboshop"
-chown roboshop:roboshop catalogue/ 
+chown -r  roboshop:roboshop catalogue/ 
 
 
 echo -n "Install nodeJS  dependencies:"
