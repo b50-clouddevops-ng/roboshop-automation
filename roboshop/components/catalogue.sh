@@ -8,7 +8,7 @@ set -e
 source components/common.sh
 
 echo -n "Configure yum repos for nodejs :"
-curl -sL https://rpm.nodesource.com/setup_lts.x | bash
+curl -sL https://rpm.nodesource.com/setup_lts.x | bash >> /tmp/nodejs.log
 stat $?
 
 echo -n "Install Nodejs :"
@@ -24,7 +24,7 @@ curl -s -L -o /tmp/catalogue.zip "https://github.com/stans-robot-project/catalog
 stat $?
 
 echo -n "Cleanup of old cataloge contents :"
-#Code to be add
+rm -rf /home/roboshop/catalogue/
 
 echo -n "Extracting cataloge contents :"
 cd /home/roboshop && unzip /tmp/catalogue.zip && mv catalogue-main catalogue
