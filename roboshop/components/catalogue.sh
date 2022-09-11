@@ -29,14 +29,15 @@ stat $?
 
 
 echo -n "Extracting cataloge contents :"
-cd /home/roboshop && unzip /tmp/catalogue.zip >> /tmp/nodejs.log && mv catalogue-main catalogue
+cd /home/roboshop 
+unzip /tmp/catalogue.zip >> /tmp/nodejs.log && mv catalogue-main catalogue
 stat $?
 
 #After extracting the catalogue component as a root we need to change the file permission from centos to roboshop user.
 drwxr-xr-x 3 root root 128 Sep 11 17:18 catalogue
 
-echo -n "change the ownership to roboshop"
-chmod roboshop:roboshop catalogue/ 
+echo -n "change the ownership of roboshop"
+chown roboshop:roboshop catalogue/ 
 
 
 echo -n "Install nodeJS  dependencies:"
