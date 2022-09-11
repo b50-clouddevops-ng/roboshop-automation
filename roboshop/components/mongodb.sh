@@ -36,7 +36,8 @@ curl -s -L -o /tmp/mongodb.zip "https://github.com/stans-robot-project/mongodb/a
 stat $?
 
 echo -n "Extracting mongodb schema :"
-cd /tmp && unzip -o mongodb.zip && cd mongodb-main  
+cd /tmp && unzip -o mongodb.zip
+cd mongodb-main  
 stat $?
 
 echo -n "Injecting the schema :"
