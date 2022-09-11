@@ -38,7 +38,7 @@ stat $?
 cd /tmp 
 
 echo -n "Extracting mongodb schema :"
-unzip -o mongodb.zip
+unzip -o mongodb.zip >> /tmp/mongodb.log 
 stat $?
 
 cd mongodb-main  
