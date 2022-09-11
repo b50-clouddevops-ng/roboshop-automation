@@ -12,7 +12,7 @@ curl -s -o /etc/yum.repos.d/mongodb.repo https://raw.githubusercontent.com/stans
 stat $?
 
 echo -n "Install Mongodb : "
-yum install -y mongodb-org
+yum install -y mongodb-org >> /tmp/mongodb.log
 stat $?
 
 systemctl -n enable mongod
