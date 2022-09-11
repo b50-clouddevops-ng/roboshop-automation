@@ -36,7 +36,7 @@ curl -s -L -o /tmp/mongodb.zip "https://github.com/stans-robot-project/mongodb/a
 stat $?
 
 echo -n "Extrac mongodb schema :"
-cd /tmp && unzip mongodb.zip && cd mongodb-main 
+cd /tmp && unzip mongodb.zip && cd mongodb-main  >> /tmp/mongodb.log
 stat $?
 
 mongo < catalogue.js
