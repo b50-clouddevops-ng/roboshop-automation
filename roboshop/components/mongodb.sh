@@ -37,12 +37,13 @@ stat $?
 
 echo -n "Extracting mongodb schema :"
 cd /tmp && unzip -o mongodb.zip
-cd mongodb-main  
 stat $?
 
 echo -n "Injecting the schema :"
+cd mongodb-main  
 mongo < catalogue.js >> /tmp/mongodb.log
 mongo < users.js >> /tmp/mongodb.log
+stat $?
 
 echo "---------MomgoDB configuration completed.------------"
 
