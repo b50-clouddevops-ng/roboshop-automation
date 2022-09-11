@@ -33,6 +33,7 @@ cd /home/roboshop
 unzip /tmp/catalogue.zip >> /tmp/nodejs.log && mv catalogue-main catalogue
 stat $?
 
+#Instead of switching the user change the file ownership.
 #After extracting the catalogue component as a root we need to change the file permission from root to roboshop .
 # [ root@catalogue /home/roboshop ]# ls -ltr
 # total 0
@@ -40,9 +41,10 @@ stat $?
 
 echo -n "change the ownership of roboshop"
 chown -R  roboshop:roboshop catalogue/ 
+stat $?
 
 
 echo -n "Install nodeJS  dependencies:"
 cd /home/roboshop/catalogue
-npm install >> /tmp/nodejs.log
+npm install &>> /tmp/nodejs.log
 stat $?
