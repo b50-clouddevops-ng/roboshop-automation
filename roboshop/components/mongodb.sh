@@ -41,8 +41,8 @@ cd mongodb-main
 stat $?
 
 echo -n "Injecting the schema :"
-mongo < catalogue.js 
-mongo < users.js
+mongo < catalogue.js >> /tmp/mongodb.log
+mongo < users.js >> /tmp/mongodb.log
 
 echo "---------MomgoDB configuration completed.------------"
 
