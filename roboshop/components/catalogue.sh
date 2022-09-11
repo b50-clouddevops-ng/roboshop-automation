@@ -28,7 +28,7 @@ rm -rf /home/roboshop/catalogue/
 stat $?
 
 echo -n "Extracting cataloge contents :"
-cd /home/roboshop && unzip /tmp/catalogue.zip && mv catalogue-main catalogue
+cd /home/roboshop && unzip /tmp/catalogue.zip >> /tmp/nodejs.log && mv catalogue-main catalogue
 stat $?
 
 echo -n "Install nodeJS  dependencies:"
