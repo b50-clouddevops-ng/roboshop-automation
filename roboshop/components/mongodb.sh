@@ -15,8 +15,9 @@ echo -n "2. Install Mongo & Start Service."
 yum install -y mongodb-org
 stat $?
 
-systemctl enable mongod
+systemctl -n enable mongod
 echo -n " start mongodb "
 systemctl start mongod
+stat $?
 
 
