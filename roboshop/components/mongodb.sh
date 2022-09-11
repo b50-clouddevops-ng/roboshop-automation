@@ -15,9 +15,9 @@ echo -n "Install Mongodb : "
 yum install -y mongodb-org >> /tmp/mongodb.log
 stat $?
 
-# echo -n "Enable MongoDB :"
-# systemctl -n enable mongod
-# stat $?
+echo -n "Enable MongoDB :"
+systemctl -n enable mongod
+stat $?
 
 echo -n "Start mongodb :"
 systemctl start mongod
