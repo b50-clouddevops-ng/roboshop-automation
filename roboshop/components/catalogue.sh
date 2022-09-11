@@ -6,3 +6,14 @@ echo "I am in frontend !!"
 set -e
 
 source components/common.sh
+
+curl -sL https://rpm.nodesource.com/setup_lts.x | bash
+
+echo -n "Install Nodejs :"
+yum install nodejs -y
+stat $?
+
+echo "Create a user call roboshot :"
+useradd roboshop
+stat $?
+
