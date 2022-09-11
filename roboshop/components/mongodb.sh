@@ -35,14 +35,16 @@ echo -n "Download the mongodb schema :"
 curl -s -L -o /tmp/mongodb.zip "https://github.com/stans-robot-project/mongodb/archive/main.zip"
 stat $?
 
+cd /tmp 
+
 echo -n "Extracting mongodb schema :"
-cd /tmp && unzip -o mongodb.zip
+unzip -o mongodb.zip
 stat $?
 
-echo -n "Injecting the schema :"
 cd mongodb-main  
-mongo < catalogue.js >> /tmp/mongodb.log
-mongo < users.js >> /tmp/mongodb.log
+
+echo -n "Injecting the schema :"
+mongo < catalogue.js >> /tmp/mongodb.log && mongo < users.js >> /tmp/mongodb.log
 stat $?
 
 echo "---------MomgoDB configuration completed.------------"
