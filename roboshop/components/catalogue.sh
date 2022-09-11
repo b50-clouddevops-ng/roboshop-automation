@@ -50,7 +50,9 @@ npm install &>> /tmp/nodejs.log
 stat $?
 
 echo -n "Configuring the systemd file :"
+sed -i -e 's/MONGO_DNSNAME/172.31.12.127' /home/roboshop/catalogue/systemd.servide
 mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
+stat $?
 
 echo -n " Reload the daemon:"
 systemctl daemon-reload
