@@ -16,7 +16,7 @@ yum install nodejs -y >> /tmp/nodejs.log
 stat $?
 
 echo -n "adding a user call roboshot :"
-useradd roboshop
+id roboshop || useradd roboshop
 stat $?
 
 echo -n "Downloading the components :"
@@ -25,12 +25,13 @@ stat $?
 
 echo -n "Cleanup of old cataloge contents :"
 rm -rf /home/roboshop/catalogue/
+stat $?
 
 echo -n "Extracting cataloge contents :"
 cd /home/roboshop && unzip /tmp/catalogue.zip && mv catalogue-main catalogue
 stat $?
 
-echo -n "Install the nodeJS :"
+echo -n "Install nodeJS  dependencies:"
 cd /home/roboshop/catalogue
-npm install
+npm install >> /tmp/nodejs.log
 stat $?
