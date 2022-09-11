@@ -23,5 +23,13 @@ echo -n "Start mongodb :"
 systemctl start mongod
 stat $?
 
+echo -n "Updating mongodb configuration file :"
+sed -e 's/127.0.0.1/0.0.0.0' /etc/mongod.conf
+stat $?
+
+echo -n " Restart mongodb :"
+systemctl restart mongod
+stat $?
+
 
 
