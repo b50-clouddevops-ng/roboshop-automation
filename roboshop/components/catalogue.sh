@@ -10,7 +10,7 @@ source components/common.sh
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 
 echo -n "Install Nodejs :"
-yum install nodejs -y
+yum install nodejs -y >> /tmp/nodejs.log
 stat $?
 
 echo "Create a user call roboshot :"
