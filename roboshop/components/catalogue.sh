@@ -36,7 +36,7 @@ stat $?
 drwxr-xr-x 3 root root 128 Sep 11 17:18 catalogue
 
 echo -n "change the ownership to roboshop"
-chomod roboshop:roboshop catalogue/ 
+chmod roboshop:roboshop catalogue/ 
 
 
 echo -n "Install nodeJS  dependencies:"
