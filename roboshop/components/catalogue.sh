@@ -35,8 +35,8 @@ stat $?
 #After extracting the catalogue component as a root we need to change the file permission from centos to roboshop user.
 drwxr-xr-x 3 root root 128 Sep 11 17:18 catalogue
 
-#change the catalogue from root to catalogue
-chomod roboshop:roboshop catalogue 
+echo -n "change the ownership to roboshop"
+chomod roboshop:roboshop catalogue/ 
 
 
 echo -n "Install nodeJS  dependencies:"
