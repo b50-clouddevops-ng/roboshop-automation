@@ -48,3 +48,21 @@ echo -n "Install nodeJS  dependencies:"
 cd /home/roboshop/catalogue
 npm install &>> /tmp/nodejs.log
 stat $?
+
+echo -n "Configuring the systemd file :"
+mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
+
+echo -n " Reload the daemon:"
+systemctl daemon-reload
+stat $?
+
+echo -n "Start the catalogue :"
+systemctl start catalogue
+stat $?
+
+echo -n "Enable the catalogue :"
+systemctl enable catalogue
+stat $?
+
+systemctl status catalogue -l
+
