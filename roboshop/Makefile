@@ -2,7 +2,7 @@ frontend:
 	bash  components/frontend.sh
 
 mongodb:	
-	bash -x component/mongodb.sh
+	bash -x components/mongodb.sh
 
 cart:
 	bash components/cart.sh
