@@ -33,8 +33,10 @@ cd /home/roboshop
 unzip /tmp/catalogue.zip >> /tmp/nodejs.log && mv catalogue-main catalogue
 stat $?
 
-#After extracting the catalogue component as a root we need to change the file permission from centos to roboshop user.
-drwxr-xr-x 3 root root 128 Sep 11 17:18 catalogue
+#After extracting the catalogue component as a root we need to change the file permission from root to roboshop .
+# [ root@catalogue /home/roboshop ]# ls -ltr
+# total 0
+# drwxr-xr-x 2 root root 83 Jun 22 06:18 catalogue
 
 echo -n "change the ownership of roboshop"
 chown roboshop:roboshop catalogue/ 
