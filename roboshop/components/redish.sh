@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "I am in MongoDb"
+echo "I am in Redish"
 
 #Validate if any script fail, don't go to the next line.
 set -e
@@ -16,8 +16,9 @@ echo  -n "Install redish"
 yum install redis-6.2.7 -y >> /tmp/redish.log
 stat $?
 
-
+echo  -n "Updating the redish config :"
 sed -i -e 's/127.0.0/0.0.0.0/' /etc/redis.conf
+stat $?
 
 echo  -n "Enable redish : "
 systemctl enable redis
