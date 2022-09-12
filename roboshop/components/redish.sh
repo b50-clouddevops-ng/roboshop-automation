@@ -17,7 +17,7 @@ yum install redis-6.2.7 -y >> /tmp/redish.log
 stat $?
 
 
-sed -i -e 's/127.0.0/0.0.0.0' /etc/redis.conf'
+sed -i -e 's/127.0.0/0.0.0.0' /etc/redis.conf
 
 echo  -n "Enable redish : "
 systemctl enable redis
