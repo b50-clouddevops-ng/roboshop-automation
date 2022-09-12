@@ -7,5 +7,8 @@ mongodb:
 catalogue:	
 	bash  components/catalogue.sh
 
+redish:	
+	bash  components/redish.sh
+
 cart:
 	bash components/cart.sh
