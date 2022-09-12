@@ -10,5 +10,8 @@ catalogue:
 redish:	
 	bash  components/redish.sh
 
+user:	
+	bash  components/user.sh
+
 cart:
 	bash components/cart.sh
