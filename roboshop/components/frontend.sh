@@ -42,3 +42,6 @@ stat $?
 echo -n "Restarting Ngnix :"
 systemctl restart nginx
 stat $?
+
+
+#*** end of frontend ****
